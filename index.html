@@ -3,29 +3,31 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
     <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
     <link rel="stylesheet" href="src/style.css" />
-    <title>ai-meal-recipe-generator</title>
+    <title>ai-desert-recipe-generator</title>
   </head>
   <body>
     <div class="container">
       <header>
-        <h1>AI Meal Recipe Generator</h1>
+        <h1>AI Desert Recipe Generator</h1>
       </header>
 
       <main>
         <form id="recipe-generator-form">
           <input
             type="text"
-            placeholder="Enter one main ingredient"
+            placeholder="Enter desired desert"
             autocomplete="off"
             autofocus
             required
             class="entry"
+            id="user-entry"
           />
           <input type="submit" class="submit-button" />
         </form>
-        <h3>Recipe 👩‍🍳🍽🥂</h3>
+        <h3>Happy Cooking!!! 👩‍🍳🍽🥂</h3>
         <div id="recipe-list"></div>
       </main>
     </div>
