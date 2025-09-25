@@ -1,5 +1,7 @@
 function showRecipe(response) {
-  console.log("Generated");
+  let loading = document.querySelector("#loading");
+  loading.classList.remove("loader");
+
   new Typewriter("#recipe-list", {
     strings: response.data.answer,
     autoStart: true,
@@ -9,11 +11,12 @@ function showRecipe(response) {
 }
 
 function generateRecipe(event) {
-  console.log("Generating...");
   event.preventDefault();
 
+  let loading = document.querySelector("#loading");
+  loading.classList.add("loader");
+
   let desertName = document.querySelector("#user-entry");
-  console.log(desertName.value);
   let apiKey = "607bfb3coe77c132397e1ee35e4f2cat";
   let prompt = `Generate a short recipe for a desert called ${desertName.value} entered by user.`;
   let context =

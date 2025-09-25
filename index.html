@@ -5,6 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
     <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="src/style.css" />
     <title>ai-desert-recipe-generator</title>
   </head>
@@ -18,7 +28,7 @@
         <form id="recipe-generator-form">
           <input
             type="text"
-            placeholder="Enter desired desert"
+            placeholder="Enter desired desert and flavor"
             autocomplete="off"
             autofocus
             required
@@ -27,10 +37,14 @@
           />
           <input type="submit" class="submit-button" />
         </form>
+        <p>i.e Chocolate cake, Vanilla icecream, Blueberry pudding</p>
         <h3>Happy Cooking!!! 👩‍🍳🍽🥂</h3>
-        <div id="recipe-list"></div>
+        <p id="loading"></p>
       </main>
     </div>
+
+    <div id="recipe-list" class="recipe-list"></div>
+
     <footer>
       This was coded by
       <a href="https://github.com/ChengetaiS" target="_blank"
